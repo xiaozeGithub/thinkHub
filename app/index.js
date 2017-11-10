@@ -3,7 +3,7 @@
 require('babel-polyfill');
 
 const  creatSuccess = () => {
-    let a = [1, 2, 3, 4];
+    let a = [1, 2, 3, '我是入口文件 我们开始吧'];
     a.map((item) => {
         console.log(item);
     })
