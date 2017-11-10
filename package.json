@@ -5,7 +5,7 @@
   "main": "n",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node_modules/.bin/webpack-dev-server"
+    "dev": "node_modules/.bin/webpack-dev-server --config ./dev-config/webpack.config.js"
   },
   "keywords": [
     "react",
@@ -39,6 +39,8 @@
     "better-npm-run": "^0.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "nyan-progress-webpack-plugin": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^4.0.0",
     "webpack": "^3.8.1",
     "webpack-bundle-analyzer": "^2.9.1",
     "webpack-dev-server": "^2.9.4"
