@@ -11,9 +11,9 @@ const path = require("path");
 // 判断当前是否处于开发状态下
 const __DEV__ = (process.env.NODE_ENV || "development") === "development";
 
-let startServer;
+// let startServer;
 
-startServer = __DEV__ ? require('./start') : null;
+// startServer = __DEV__ ? require('./start') : null;
 
 // 通用插件组
 exports.commonPlugins = [
@@ -58,7 +58,7 @@ exports.devPlugins = [
         restoreCursorPosition: true,
         nyanCatSays:function(progress, messages) {return progress === 1 && 'success'}
     }),
-    startServer
+    // startServer
 ];
 
 // 生产环境下使用插件

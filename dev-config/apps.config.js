@@ -5,7 +5,7 @@ module.exports = {
     apps: [
         {
             id: "app",
-            src: "./src/app/index.js",
+            src: "./app/index.js",
             indexPage: defaultIndexPage,
             // 如果还未开发好,就设置为false
             compiled: false
@@ -15,7 +15,7 @@ module.exports = {
     // 开发入口配置
     devServer: {
         // 当前待调试的 APP 的入口文件
-        appEntrySrc: "./src/app/index.js",
+        appEntrySrc: "./app/index.js",
         // 监听的 Server 端口
         host: '0.0.0.0',
         port: 3000
