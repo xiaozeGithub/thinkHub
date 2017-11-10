@@ -15,6 +15,7 @@ const appsConfig = require("./apps.config.js");
 // 定义入口变量
 let entry;
 
+
 // 根据不同的环境状态设置不同的开发变量
 if (__DEV__) {
     // 开发状态下的默认入口
@@ -61,7 +62,6 @@ let config = {
         // 块文件索引
         chunkFilename: "[name].[chunkhash].chunk.js"
     },
-    
     // 配置插件
     plugins: (__DEV__
         ? // 开发环境下所需要的插件
@@ -83,7 +83,7 @@ let config = {
     externals: utils.externals,
     target: "web",
     resolve: {
-        modules: ["node_modules", "src/app"],
+        modules: ["node_modules", "./app"],
         extensions: [".js", ".jsx", ".json"]
     }
     
