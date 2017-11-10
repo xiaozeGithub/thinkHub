@@ -8,7 +8,6 @@ const config = require("./../webpack.config.js");
 const appsConfig = require("../apps.config.js");
 
 const compiler = webpack(config);
-console.log(1111111111);
 const server = new WebpackDevServer(compiler, {
     // 设置 WebpackDevServer 的开发目录，默认为当前项目的根目录
     contentBase: path.join(__dirname, "./app"),
@@ -28,11 +27,9 @@ const server = new WebpackDevServer(compiler, {
     stats: {colors: true},
     disableHostCheck: true
 });
-console.log(222222222);
 server.listen(appsConfig.devServer.port, function (err, result) {
     if (err) {
         return console.log(err);
     }
-
     console.log(`Listening at http://${appsConfig.devServer.host}:${appsConfig.devServer.port}/`);
 });
