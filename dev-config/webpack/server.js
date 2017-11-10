@@ -10,7 +10,7 @@ const appsConfig = require("../apps.config.js");
 const compiler = webpack(config);
 const server = new WebpackDevServer(compiler, {
     // 设置 WebpackDevServer 的开发目录，默认为当前项目的根目录
-    contentBase: path.join(__dirname, "./app"),
+    contentBase: path.join(__dirname, "../../app"),
     publicPath: `http:\/\/${appsConfig.devServer.host}:${appsConfig.devServer.port}/assets/`,
     proxy: appsConfig.proxy,
     // 其他配置项
@@ -33,3 +33,4 @@ server.listen(appsConfig.devServer.port, function (err, result) {
     }
     console.log(`Listening at http://${appsConfig.devServer.host}:${appsConfig.devServer.port}/`);
 });
+
