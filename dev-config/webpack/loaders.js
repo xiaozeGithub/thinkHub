@@ -49,8 +49,7 @@ exports.styles = {
     css: {
         test: /\.scss$|.css$/,
         include: [
-            path.join(__dirname, '../../src/app/styles'),
-            path.join(__dirname, '../../node_modules/carbon/lib')
+            path.join(__dirname, '../../app/styles')
         ],
         use: __DEV__
             ? ["style-loader", moduleCSSLoader, postCSSLoader]
@@ -66,8 +65,8 @@ exports.styles = {
 exports.assets = {
     test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif|mp4|webm)(\?\S*)?$/,
     include: [
-        path.join(__dirname, '../../src'),
-        path.join(__dirname, '../../node_modules/carbon/lib')
+        path.join(__dirname, '../../app')
+        // path.join(__dirname, '../../node_modules/carbon/lib')
     ],
     loader: "url-loader?limit=8192&name=assets/[hash].[ext]"
 };

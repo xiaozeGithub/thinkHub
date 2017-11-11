@@ -7,12 +7,12 @@ import React, {Component} from 'react'
 import {render} from 'react-dom'
 import Routers from './route/router'
 
-import './styles/css/base.css'
+import './styles/base.css'
 
 
 
 // 组件渲染到真实dom节点
-render(
-	<Routers/>,
-	document.getElementById('app')
-)
+// render(
+// 	<Routers/>,
+// 	document.getElementById('app')
+// )
