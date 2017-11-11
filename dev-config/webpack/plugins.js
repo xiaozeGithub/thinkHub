@@ -1,6 +1,8 @@
 'use strict';
 const webpack = require("webpack");
+const appsConfig = require("../apps.config.js");
 
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const NyanProgressPlugin = require("nyan-progress-webpack-plugin");
@@ -54,10 +56,11 @@ exports.devPlugins = [
     
     
     // new DashboardPlugin(),
-    new require('nyan-progress-webpack-plugin')({
+    new NyanProgressPlugin({
         restoreCursorPosition: true,
-        nyanCatSays:function(progress, messages) {return progress === 1 && 'success'}
+        nyanCatSays:function(progress, messages) {return progress === 1 && `welcome ${appsConfig.projectName}`}
     }),
+    new OpenBrowserPlugin({url: `http://${appsConfig.devServer.host}:${appsConfig.devServer.port}/`})
     // startServer
 ];
 
@@ -121,7 +124,8 @@ let prodPlugins = [
         analyzerMode: "static"
     }),
     
-    new webpack.optimize.AggressiveMergingPlugin() // Merge chunks 来改善chunk传输
+    new webpack.optimize.AggressiveMergingPlugin(), // Merge chunks 来改善chunk传输
+    
 ];
 
 

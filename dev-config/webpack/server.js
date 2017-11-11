@@ -27,7 +27,7 @@ const server = new WebpackDevServer(compiler, {
     stats: {colors: true},
     disableHostCheck: true
 });
-server.listen(appsConfig.devServer.port, function (err, result) {
+server.listen(appsConfig.devServer.port, appsConfig.devServer.host, function (err, result) {
     if (err) {
         return console.log(err);
     }

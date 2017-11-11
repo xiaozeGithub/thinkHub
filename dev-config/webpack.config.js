@@ -5,7 +5,6 @@ const loaders = require("./webpack/loaders");
 const plugins = require("./webpack/plugins");
 const utils = require("./webpack/utils");
 
-
 // 判断当前是否处于开发状态下
 const __DEV__ = (process.env.NODE_ENV || "development") === "development";
 

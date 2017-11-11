@@ -1,6 +1,7 @@
 const defaultIndexPage = "./dev-config/server/template.html";
 
 module.exports = {
+    projectName : 'thinkHub',
     // 基本的应用配置信息
     apps: [
         {
