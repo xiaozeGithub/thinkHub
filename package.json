@@ -20,6 +20,9 @@
             }
         }
     },
+    "babel": {
+        "extends": "./dev-config/tool/.babelrc"
+    },
     "author": "ZN",
     "license": "ISC",
     "devDependencies": {
@@ -65,13 +68,13 @@
         "postcss-scss": "^0.4.0",
         "postcss-selector-not": "^2.0.0",
         "precss": "^2.0.0",
+        "react-hot-loader": "^3.1.2",
         "style-loader": "0.18.2",
         "url-loader": "0.5.9",
         "wasm-loader": "^1.0.0",
         "webpack": "^3.8.1",
         "webpack-bundle-analyzer": "^2.9.1",
-        "webpack-dev-server": "^2.9.4",
-        "react-hot-loader": "^3.1.2"
+        "webpack-dev-server": "^2.9.4"
     },
     "dependencies": {
         "react": "^15.5.4",

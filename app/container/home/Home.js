@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 class Home extends React.Component {
     constructor(props, context) {
@@ -10,4 +11,4 @@ class Home extends React.Component {
         )
     }
 }
-module.exports = Login
+module.exports = Home
