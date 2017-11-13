@@ -15,7 +15,8 @@
 		"add-module-exports",
 		"transform-class-properties",
 		"transform-react-display-name",
-		"transform-decorators-legacy"
+        "transform-decorators-legacy",
+        ["import", { "libraryName": "antd", "style": "css" }]
 	],
 	"env": {
 		"development": {

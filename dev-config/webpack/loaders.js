@@ -26,14 +26,14 @@ exports.jslint = {
 };
 
 // 根据不同的环境开发设置不同的样式加载的Loader
-const moduleCSSLoader = {
-    loader: "css-loader",
-    query: {
-        modules: true,
-        importLoaders: 1,
-        localIdentName: "[path]___[name]__[local]___[hash:base64:5]"
-    }
-};
+// const moduleCSSLoader = {
+//     loader: "css-loader",
+//     query: {
+//         modules: true,
+//         importLoaders: 1,
+//         localIdentName: ""
+//     }
+// };
 
 const postCSSLoader = {
     loader: "postcss-loader",
@@ -46,17 +46,26 @@ const postCSSLoader = {
 };
 
 exports.styles = {
-    css: {
-        test: /\.scss$|.css$/,
-        include: [
-            path.join(__dirname, '../../app/styles')
-        ],
-        use: __DEV__
-            ? ["style-loader", moduleCSSLoader, postCSSLoader]
-            : ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: [moduleCSSLoader, postCSSLoader]
-            })
+    // css: {
+    //     test: /\.scss$|.css$/,
+    //     include: [
+    //         path.join(__dirname, '../../app/styles')
+    //     ],
+    //     use: __DEV__
+    //         ? ["style-loader", moduleCSSLoader, postCSSLoader]
+    //         : ExtractTextPlugin.extract({
+    //             fallback: 'style-loader',
+    //             use: [moduleCSSLoader, postCSSLoader]
+    //         })
+    // },
+    scss: 
+    {
+        test: /\.scss$/,
+        loader:  ["style-loader", "css-loader", "sass-loader", postCSSLoader]
+    },
+    css:{
+        test: /\.css$/,
+        loader: ["style-loader", "css-loader", postCSSLoader]
     }
 };
 

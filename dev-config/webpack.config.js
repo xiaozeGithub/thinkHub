@@ -74,6 +74,7 @@ let config = {
             loaders.wasm,
             loaders.jsx,
             loaders.styles.css,
+            loaders.styles.scss,
             loaders.assets,
             loaders.json
         ]

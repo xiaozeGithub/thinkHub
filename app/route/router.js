@@ -19,7 +19,7 @@ export default class Routers extends Component {
             <Router history={hashHistory}>
                 <Route path='/' component={Home}
                     onLeave={({ params }) => {
-                        console.log('离开了登录页 我们去首页');
+                        // console.log('离开了登录页 我们去首页');
                     }}>
                 </Route>
             </Router>

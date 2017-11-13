@@ -18,7 +18,7 @@ module.exports = {
         appEntrySrc: "./app/index.js",
         // 监听的 Server 端口
         host: '127.0.0.1',
-        port: 3000
+        port: 4000
     },
     
     // 依赖项配置
